@@ -1,0 +1,71 @@
+<!--========================================================== -->
+<!--MODALE EDITAR USUARIOS-->
+<!--========================================================== -->
+
+<div class="modal fade" id="editarProveedor" tabindex="-1" aria-labelledby="registerLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+            <div class="container mt-5 p-4">
+                <h2>Editar Proveedor</h2>
+                <form id="editarProveedorform">
+                    <div class="mb-3">
+                        <label for="editarProveedorNombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="editarProveedorNombre" name="editarProveedorNombre" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="editarProveedorDocumento" class="form-label">Documento</label>
+                        <input type="text" class="form-control" id="editarProveedorDocumento" name="editarProveedorDocumento" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="editarProveedorTelefono" class="form-label">Teléfono</label>
+                        <input type="text" class="form-control" id="editarProveedorTelefono" name="editarProveedorTelefono" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="editarProveedorCorreo" class="form-label">Correo</label>
+                        <input type="email" class="form-control" id="editarProveedorCorreo" name="editarProveedorCorreo" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="editarProveedorDireccion" class="form-label">Dirección</label>
+                        <input type="text" class="form-control" id="editarProveedorDireccion" name="editarProveedorDireccion" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="editarProveedorCiudad" class="form-label">Ciudad</label>
+                        <input type="text" class="form-control" id="editarProveedorCiudad" name="editarProveedorCiudad" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="editarProveedorDepartamento" class="form-label">Departamento</label>
+                        <input type="text" class="form-control" id="editarProveedorDepartamento" name="editarProveedorDepartamento" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="editarProveedorTipoEmpresa" class="form-label">Tipo de Empresa</label>
+                        <select class="form-select" id="editarProveedorTipoEmpresa" name="editarProveedorTipoEmpresa" required>
+                            <option value="Distribuidor">Distribuidor</option>
+                            <option value="Fabricante">Fabricante</option>
+                            <option value="Comerciante">Comerciante</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="editarProveedorMetodoPago" class="form-label">Método de Pago</label>
+                        <select class="form-select" id="editarProveedorMetodoPago" name="editarProveedorMetodoPago" required>
+                            <option value="Transferencia">Transferencia</option>
+                            <option value="Cheque">Cheque</option>
+                            <option value="Tarjeta de crédito">Tarjeta de crédito</option>
+                            <option value="Efectivo">Efectivo</option>
+                        </select>
+                    </div>
+                    <div class="d-flex justify-content-between" style="margin-bottom: 10px;">
+                        <button type="submit" class="btn btn-success">Guardar Cambios <i class="fa-solid fa-check"
+                                style="margin-left: 10px;"></i></button>
+                        <a id="cerrarModalEditarProveedor" class="btn btn-danger">Cancelar</a>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!----------------------------SCRIPTS----------------------------->
+
+<script src="/js/admin/proveedores/editarProveedor.js"></script>

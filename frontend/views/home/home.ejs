@@ -1,0 +1,391 @@
+<!--========================================================== -->
+<!-- HEAD -->
+<!--========================================================== -->
+
+<%- include('../partials/home/head.ejs', {tituloWeb: 'Pagina de inicio' }) %>
+
+<!--========================================================== -->
+<!-- NAVBAR -->
+<!--========================================================== -->
+
+<%- include('../partials/home/navbar.ejs') %>
+
+<!--========================================================== -->
+<!-- PORTADA DE INICIO -->
+<!--========================================================== -->
+
+        <div class="container__cover div__offset">
+            <div class="cover">
+                <section class="text__cover">
+                    <h1>Gestiona tu inventario de forma sencilla</h1>
+                    <br>
+                    <h1>¡Registrate!</h1>
+                    <br>
+                    <p>Sujeto a <a type="button" data-bs-toggle="modal" data-bs-target="#termsModal">Términos</a> y Condiciones.</p>
+                    <br>
+                    <a class="btn__text" data-bs-toggle="modal" data-bs-target="#register"> ¡Registrate Ahora! </a>
+
+                </section>
+                <section class="image__cover">
+                    <img src="/img/contenido/innovacion.png" alt="img.png">
+                </section>
+            </div>
+        </div>
+
+        <div style="margin: 0px 20px;" id="sobre-nosotros">
+            <div class="cont__cover row">
+                <section>
+                    <h1>¿Qué es la gestión de inventario?</h1>
+                    <p>El sistema de gestión de inventario controla y rastrea los niveles de inventario, los pedidos,
+                        las
+                        ventas y las entregas de una empresa. Ayuda a identificar la cantidad correcta de existencias
+                        para
+                        ordenar.</p>
+                </section>
+            </div>
+        </div>
+
+        <!--========================================================== -->
+        <!-- WAVE -->
+        <!--========================================================== -->
+
+        <div>
+            <section class="wave"></section>
+        </div>
+
+        <!--========================================================== -->
+        <!-- QUIENES SOMOS -->
+        <!--========================================================== -->
+
+        <div class="container__about div__offset">
+            <div class="about">
+
+                <div class="text__about">
+                    <h1>¡Bienvenido a InfiniteCode!</h1>
+                    <p>En InfiniteCode, nos especializamos en la gestión de inventarios. Nuestra empresa se enorgullece
+                        de
+                        ofrecer soluciones de gestión de inventarios muy intuitivas, accesibles económicamente y
+                        centradas
+                        en el éxito del cliente.</p>
+                    <a class="btn-sbns" type="button" data-bs-toggle="modal" data-bs-target="#saberMas">Saber Más</a>
+                </div>
+
+                <div class="image__about">
+                    <img src="/img/logo/img-text.png" alt="">
+                </div>
+
+            </div>
+        </div>
+
+        <!--========================================================== -->
+        <!-- PAQUETES -->
+        <!--========================================================== -->
+
+        <div class="container__trust container__card-primary">
+            <section class="trust card__primary">
+                <div class="text__trust text__card-primary" id="paquetes">
+                    <p>Adquiere alguno de nuestros paquetes</p>
+                    <br><br>
+                    <h1>GESTIONA TU INVENTARIO</h1>
+                </div>
+                <div class="container__trust container__box-cardPrimary">
+                    <div class="card__trust box__card-primary">
+                        <img src="/img/logo-planes/inventario-01.png" alt="">
+                        <h2>Inventario Básico</h2>
+                        <p>Con esta opción, podrás realizar un seguimiento de tus productos, controlar las existencias y
+                            mantener un registro ordenado de tus artículos.</p>
+                    </div>
+                    <div class="card__trust box__card-primary">
+                        <img src="/img/logo-planes/inventario-02.png" alt="">
+                        <h2>Inventario Avanzado</h2>
+                        <p>El inventario avanzado es perfecto para empresas en crecimiento que requieren un mayor nivel
+                            de
+                            control y funcionalidad en su gestión de inventario.</p>
+                    </div>
+                    <div class="card__trust box__card-primary">
+                        <img src="/img/logo-planes/inventario-03.png" alt="">
+                        <h2>Inventario Premium</h2>
+                        <p>Con esta opción, disfrutarás de características de vanguardia, como el rastreo de lotes,
+                            gestión
+                            de múltiples ubicaciones y control de personal.</p>
+                    </div>
+                </div>
+                <br>
+                <a data-bs-toggle="modal" data-bs-target="#register" class="btn__text"
+                    style="width: 250px;height: 70px;margin-bottom: 20px;">Prueba gratuita, regístrate ya!
+                </a>
+            </section>
+        </div>
+
+        <!--========================================================== -->
+        <!-- WAVE -->
+        <!--========================================================== -->
+
+        <div>
+            <section class="wave-proyecto"></section>
+        </div>
+
+        <!--========================================================== -->
+        <!-- PROYECTOS -->
+        <!--========================================================== -->
+
+        <div class="contenedor-proyecto" id="proyectos">
+            <section class="tarjeta-primaria">
+                <div class="texto__card-primary">
+                    <h1>PROYECTOS</h1>
+                    <p>Estos son algunos de nuestros proyectos</p>
+                </div>
+
+                <div class="proyectos">
+                    <div class="proyecto">
+                        <img src="/img/proyectos/proyecto1.png" alt="proyecto-1">
+                        <div class="capa">
+                            <h2>Proyecto 1</h2>
+                            <a href="https://github.com/">
+                                <i class="fa-brands fa-github-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="proyecto">
+                        <img src="/img/proyectos/proyecto2.png" alt="proyecto-2">
+                        <div class="capa">
+                            <h2>Proyecto 2</h2>
+                            <a href="https://github.com/">
+                                <i class="fa-brands fa-github-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="proyecto">
+                        <img src="/img/proyectos/proyecto3.png" alt="proyecto-3">
+                        <div class="capa">
+                            <h2>Proyecto 3</h2>
+                            <a href="https://github.com/">
+                                <i class="fa-brands fa-github-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="proyecto">
+                        <img src="/img/proyectos/proyecto4.png" alt="proyecto-4">
+                        <div class="capa">
+                            <h2>Proyecto 4</h2>
+                            <a href="https://github.com/">
+                                <i class="fa-brands fa-github-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="proyecto">
+                        <img src="/img/proyectos/proyecto5.png" alt="proyecto-5">
+                        <div class="capa">
+                            <h2>Proyecto 5</h2>
+                            <a href="https://github.com/">
+                                <i class="fa-brands fa-github-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="proyecto">
+                        <img src="/img/proyectos/proyecto6.png" alt="proyecto-6">
+                        <div class="capa">
+                            <h2>Proyecto 6</h2>
+                            <a href="https://github.com/">
+                                <i class="fa-brands fa-github-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+                <a href="https://github.com/" class="btn-proyecto">Más proyectos</a>
+            </section>
+        </div>
+
+        <!--========================================================== -->
+        <!-- CARRUSEL DE TESTIMONIOS -->
+        <!--========================================================== -->
+
+        <div id="page" class="site">
+            <div class="container">
+                <div class="testi">
+                    <div class="head" id="testimonios">
+                        <h2>Testimonios</h2>
+                        <p>Estos son algunos testimonios de nuestros clientes</p>
+                    </div>
+                    <div class="body swiper">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide">
+                                <div class="wrapper">
+                                    <div class="thumbal">
+                                        <img src="/img/clientes/usuario-1.png" alt="usuario">
+                                    </div>
+                                    <div class="aside">
+                                        <p>" 'InfiniteCode' ha transformado nuestra gestión de inventario. Es esencial
+                                            para
+                                            mantener el control y optimizar nuestras operaciones logísticas." .</p>
+                                        <div class="name">
+                                            <h4>Oscar Moreno</h4>
+                                            <p>Gerente de Logística</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="wrapper">
+                                    <div class="thumbal">
+                                        <img src="/img/clientes/usuario-2.png" alt="usuario">
+                                    </div>
+                                    <div class="aside">
+                                        <p>"Con 'InfiniteCode', hemos mejorado significativamente nuestra eficiencia
+                                            operativa. Su capacidad para prever demandas y gestionar inventarios nos ha
+                                            permitido reducir costos y maximizar ingresos."</p>
+                                        <div class="name">
+                                            <h4>Juan Pérez</h4>
+                                            <p>Director Financiero</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="wrapper">
+                                    <div class="thumbal">
+                                        <img src="/img/clientes/usuario-3.png" alt="usuario">
+                                    </div>
+                                    <div class="aside">
+                                        <p>" 'InfiniteCode' ha simplificado nuestras tareas diarias en el almacén. Su
+                                            interfaz intuitiva y funciones personalizables nos han ayudado a realizar
+                                            inventarios de manera rápida y precisa."</p>
+                                        <div class="name">
+                                            <h4>Elkin Franco</h4>
+                                            <p>Coordinadora de Almacén</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="wrapper">
+                                    <div class="thumbal">
+                                        <img src="/img/clientes/usuario-4.png" alt="usuario">
+                                    </div>
+                                    <div class="aside">
+                                        <p>" 'InfiniteCode' nos ha proporcionado una visión clara y precisa de nuestro
+                                            inventario en tiempo real. Esta herramienta esencial nos ha permitido tomar
+                                            decisiones informadas y estratégicas para el crecimiento de nuestra
+                                            empresa."</p>
+                                        <div class="name">
+                                            <h4>Manuel Ramirez</h4>
+                                            <p>CEO</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="wrapper">
+                                    <div class="thumbal">
+                                        <img src="/img/clientes/usuario-5.png" alt="usuario">
+                                    </div>
+                                    <div class="aside">
+                                        <p>"Desde que implementamos 'InfiniteCode', nuestro proceso de abastecimiento se
+                                            ha
+                                            vuelto más eficiente. La automatización impecable de las compras nos ha
+                                            ayudado
+                                            a mantener el stock adecuado y a evitar escaseces."</p>
+                                        <div class="name">
+                                            <h4>Ana Rodríguez</h4>
+                                            <p>Coordinadora de Compras</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="wrapper">
+                                    <div class="thumbal">
+                                        <img src="/img/clientes/usuario-6.png" alt="usuario">
+                                    </div>
+                                    <div class="aside">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci eum est
+                                            amet
+                                            eaque molestias excepturi iusto, ex tempora consectetur quam ipsum veniam
+                                            facere
+                                            odio aperiam aliquid vero praesentium vel!s.</p>
+                                        <div class="name">
+                                            <h4>Jorge Gallego</h4>
+                                            <p>Almacenista</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--========================================================== -->
+        <!-- CONTACTO -->
+        <!--========================================================== -->
+
+        <div class="contendor-contacto seccion-oscura" id="contacto">
+            <section id="contacto" class="contacto">
+                <div class="container">
+                    <div class="container text-center rectangulo d-flex justify-content-evenly">
+                        <div class="row ">
+                            <div class="col-12 col-md-4 seccion-titulo">
+                                ¡Hablemos!
+                            </div>
+                            <div class="col-12 col-md-4 descripcion">
+                                Contáctanos para iniciar tu proyecto de desarrollo web y haremos que tu visión se vuelva
+                                realidad.
+                            </div>
+                            <div class="col-12 col-md-4 contenedor-contacto">
+                                <button class="btn-contacto" data-bs-toggle="modal" data-bs-target="#correoElectronico">
+                                    Contacto <i class="fa-regular fa-envelope"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+<!--========================================================== -->
+<!--FOOTER-->
+<!--========================================================== -->
+
+<%- include('../partials/home/footer.ejs') %>
+
+<!--========================================================== -->
+<!-- MODAL CONTACTO -->
+<!--========================================================== -->
+
+<%- include('../modales/contacto/modalContacto.ejs') %>
+
+<!--========================================================== -->
+<!--MODAL LOGIN-->
+<!--========================================================== -->
+
+<%- include('../modales/loginUsuarios/loginUsuarios.ejs') %>
+
+<!--========================================================== -->
+<!--MODAL REGISTER-->
+<!--========================================================== -->
+
+<%- include('../modales/registroUsuarios/registroUsuarios.ejs') %>
+
+<!--========================================================== -->
+<!--MODAL RECUPERAR CONTRASENA-->
+<!--========================================================== -->
+
+<%- include('../modales/recuperarContrasena/recuperarContrasena.ejs') %>
+
+<!--========================================================== -->
+<!--MODAL TERMINOS Y CONDICIONES-->
+<!--========================================================== -->
+
+<%- include('../modales/terminoYcondiciones/terminosYcondiciones.ejs') %>
+
+<!--========================================================== -->
+<!--MODAL SABER MÁS-->
+<!--========================================================== -->
+
+<%- include('../modales/saberMas/saberMas.ejs') %>

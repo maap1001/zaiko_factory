@@ -1,0 +1,46 @@
+<!--========================================================== -->
+<!--MODAL EDITAR CLIENTE-->
+<!--========================================================== -->
+
+<div class="modal fade" id="editarCliente" tabindex="-1" aria-labelledby="editarClienteLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+            <div class="container mt-5 p-4">
+                <h2>Editar Cliente</h2>
+                <form id="editarClienteForm">
+                    <div class="mb-3">
+                        <label for="editarClienteNombre" class="form-label">Nombre Completo</label>
+                        <input type="text" class="form-control" id="editarClienteNombre" name="editarClienteNombre" required minlength="3">
+                    </div>
+                    <div class="mb-3">
+                        <label for="editarClienteDocumento" class="form-label">Documento</label>
+                        <input type="text" class="form-control" id="editarClienteDocumento" name="editarClienteDocumento" required maxlength="11">
+                    </div>
+                    <div class="mb-3">
+                        <label for="editarClienteTelefono" class="form-label">Teléfono</label>
+                        <input type="text" class="form-control" id="editarClienteTelefono" name="editarClienteTelefono" required minlength="9" maxlength="14">
+                    </div>
+                    <div class="mb-3">
+                        <label for="editarClienteCorreo" class="form-label">Correo Electrónico</label>
+                        <input type="email" class="form-control" id="editarClienteCorreo" name="editarClienteCorreo" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="editarClienteDireccion" class="form-label">Dirección</label>
+                        <input type="text" class="form-control" id="editarClienteDireccion" name="editarClienteDireccion">
+                    </div>
+                    <div class="d-flex justify-content-between" style="margin-bottom: 10px;">
+                        <button type="submit" class="btn btn-success">Guardar Cambios <i class="fa-solid fa-check"
+                                style="margin-left: 10px;"></i></button>
+                        <a id="cerrarModalEditarCliente" class="btn btn-danger">Cancelar</a>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!------------------------------SCRIPTS----------------------------->
+
+<script src="/js/admin/clientes/editarCliente.js"></script>

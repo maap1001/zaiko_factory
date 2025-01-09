@@ -1,0 +1,64 @@
+<!--========================================================== -->
+<!--MODALE EDITAR PRODUCTOS-->
+<!--========================================================== -->
+
+<div class="modal fade" id="editarProducto" tabindex="-1" aria-labelledby="editarProductoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="container mt-5 p-4">
+                <h2>Editar Producto</h2>
+                <form id="editarFormularioProducto" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label for="editarProductoNombre" class="form-label">Nombre del Producto</label>
+                        <input type="text" class="form-control" id="editarProductoNombre" name="editarProductoNombre" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="editarProductoFoto" class="form-label">Foto Actual</label>
+                        <input type="text" class="form-control" id="editarProductoFotoTexto" value="foto actual" readonly>
+                        <input type="file" class="form-control mt-2" id="editarProductoFoto" name="imagen">
+                    </div>                    
+                    <div class="mb-3">
+                        <label for="editarProductoPrecio" class="form-label">Precio</label>
+                        <input type="number" class="form-control" id="editarProductoPrecio" name="editarProductoPrecio" required min="0">
+                    </div>
+                    <div class="mb-3">
+                        <label for="editarProductoCantidad" class="form-label">Cantidad</label>
+                        <input type="number" class="form-control" id="editarProductoCantidad" name="editarProductoCantidad" required min="0">
+                    </div>
+                    <div class="mb-3">
+                        <label for="editarProductoFechaVencimiento" class="form-label">Fecha de Vencimiento</label>
+                        <input type="date" class="form-control" id="editarProductoFechaVencimiento" name="editarProductoFechaVencimiento">
+                    </div>
+                    <div class="mb-3">
+                        <label for="editarProductoCategoria" class="form-label">Categoría</label>
+                        <select class="form-select" id="editarProductoCategoria" name="editarProductoCategoria" required>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="editarProductoProveedor" class="form-label">Proveedor</label>
+                        <select class="form-select" id="editarProductoProveedor" name="editarProductoProveedor" required>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="editarProductoEstado" class="form-label">Estado</label>
+                        <select class="form-select" id="editarProductoEstado" name="editarProductoEstado" required>
+                            <option value="disponible">Disponible</option>
+                            <option value="agotado">Agotado</option>
+                        </select>
+                    </div>
+                    <div class="d-flex justify-content-between" style="margin-bottom: 10px;">
+                        <button type="submit" class="btn btn-success">Guardar Cambios <i class="fa-solid fa-check" style="margin-left: 10px;"></i></button>
+                        <a id="cerrarModalEditarProducto" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!----------------------------SCRIPTS----------------------------->
+
+<script src="/js/admin/productos/editarProducto.js"></script>
+
+<script src="/js/admin/productos/selectsEditar.js"></script>
+

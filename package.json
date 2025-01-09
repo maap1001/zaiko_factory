@@ -1,0 +1,31 @@
+{
+  "name": "zaiko_factory",
+  "version": "1.0.0",
+  "description": "inventario",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js",
+    "start": "node index.js",
+    "lint": "eslint . --ext .js"
+  },
+  "author": "zaiko factory <infinitecode4@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
+    "child_process": "^1.0.2",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.20.0",
+    "express-session": "^1.18.0",
+    "mongoose": "^8.6.1",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "node-cron": "^3.0.3",
+    "nodemailer": "^6.9.15",
+    "nodemon": "^3.1.4",
+    "path": "^0.12.7",
+    "router": "^2.0.0"
+  }
+}

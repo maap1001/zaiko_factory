@@ -1,0 +1,113 @@
+<!--========================================================== -->
+<!-- HEAD -->
+<!--========================================================== -->
+
+<%- include('../../partials/admin/head.ejs', {tituloWeb: 'PROVEEDORES' }) %>
+
+<!--========================================================== -->
+<!-- NAVBAR -->
+<!--========================================================== -->
+
+<%- include('../../partials/admin/navbar.ejs') %>
+
+<!--========================================================== -->
+<!-- BARRA LATERAL -->
+<!--========================================================== -->
+
+<%- include('../../partials/admin/barraLateral.ejs') %>
+
+<!--========================================================== -->
+<!-- CONTENIDO -->
+<!--========================================================== -->
+
+<div id="layoutSidenav_content">
+    <div class="container-fluid px-4">
+        
+        <div class="container my-5 contenedorCentrado tablas-formularios">
+            <div class="row" style="padding: 20px;">
+
+                <table id="example" class="table table-striped " >
+                    <caption>
+                        Categorias
+                    </caption>
+                    <thead  class="texto-centrado">
+                        <tr>
+                            <th scope="col">Nombre</th> 
+                            <th scope="col">Descripción</th> 
+                            <th scope="col">Presentacion</th> 
+                            <th scope="col">Acciones</th> 
+                        </tr>
+                    </thead>
+                    <tbody>    
+                        <% categorias.forEach(categoria => { %>
+                            <tr>
+                                <td><%= categoria.nombre %></td>
+                                <td><%= categoria.descripcion %></td> 
+                                <td><%= categoria.presentacion %></td>
+                                <td>
+                                    <div class="btn-group btn-group-sm" role="group" aria-label="Acciones">
+                                        <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#detalleCategoria"
+                                            data-id="<%= categoria._id %>">
+                                            <i class="fa-solid fa-eye"></i> Detalles
+                                        </a>
+                                        <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editarCategoria"
+                                            data-id="<%= categoria._id %>"
+                                            data-nombre="<%= categoria.nombre %>"
+                                            data-descripcion="<%= categoria.descripcion %>"
+                                            data-presentacion="<%= categoria.presentacion %>">
+                                            <i class="fa-solid fa-user-pen"></i> Editar
+                                        </button>
+                                        <a class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#eliminarCategoria"
+                                            data-id="<%= categoria._id %>">
+                                            <i class="fa-solid fa-trash"></i> Eliminar
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <% }) %>
+                            
+                    </tbody>
+                </table>
+                <a
+                    data-bs-toggle="modal" data-bs-target="#crearCategoria"
+                    class="btn btn-success btn-crear">
+                    Registrar categorias
+                    <i 
+                    class="fa-solid fa-plus" 
+                    style="margin-left: 9px;">
+                    </i>
+                </a>                  
+        
+            </div>
+        </div>
+            
+    </div>
+</div>
+
+
+<!--========================================================== -->
+<!--FOOTER-->
+<!--========================================================== -->
+
+<%- include('../../partials/admin/footer.ejs') %>
+
+<!--========================================================== -->
+<!--MODAL DETALLE CATEGORIA-->
+<!--========================================================== -->
+<%- include('../../modales/categorias/detalleCategorias.ejs') %>
+
+<!--========================================================== -->
+<!--MODAL CREAR CATEGORIA-->
+<!--========================================================== -->
+<%- include('../../modales/categorias/crearCategorias.ejs') %>
+
+<!--========================================================== -->
+<!--MODAL EDITAR CATEGORIA-->
+<!--========================================================== -->
+<%- include('../../modales/categorias/editarCategorias.ejs') %>
+
+<!--========================================================== -->
+<!--MODAL ELIMINAR CATEGORIA-->
+<!--========================================================== -->
+<%- include('../../modales/categorias/eliminarCategorias.ejs') %>
+

@@ -1,0 +1,43 @@
+<!--========================================================== -->
+<!-- MODAL CREAR INVENTARIO -->
+<!--========================================================== -->
+
+<div class="modal fade" id="crearInventario" tabindex="-1" aria-labelledby="inventarioLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+            <div class="container mt-5 p-4">
+                <h2>Registrar Inventario</h2>
+                <form id="formCrearInventario">
+                    <div class="mb-3">
+                        <label for="productoInventarioCrear" class="form-label">Producto</label>
+                        <select class="form-select" name="productoInventarioCrear" id="productoInventarioCrear" required>
+                            <option value="" disabled selected>Seleccione el producto</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="cantidadInventarioCrear" class="form-label">Cantidad</label>
+                        <input type="number" class="form-control" name="cantidadInventarioCrear" id="cantidadInventarioCrear" placeholder="Ingresa la cantidad" required min="0">
+                    </div>
+                    <div class="mb-3">
+                        <label for="ubicacionInventarioCrear" class="form-label">Ubicación</label>
+                        <select class="form-select" name="ubicacionInventarioCrear" id="ubicacionInventarioCrear" required>
+                            <option value="" disabled selected>Seleccione la ubicación</option>
+                        </select>
+                    </div>
+                    <div class="d-flex justify-content-between" style="margin-bottom: 10px;">
+                        <button type="submit" class="btn btn-success">Crear Inventario</button>
+                        <a id="cerrarModalCrearInventario" class="btn btn-danger">Cancelar</a>
+                    </div>
+                </form>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<!----------------------------SCRIPTS----------------------------->
+
+<script src="/js/admin/inventario/crearInventario.js"></script>
+<script src="/js/admin/inventario/selects.js"></script>
+

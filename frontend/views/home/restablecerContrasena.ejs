@@ -1,0 +1,88 @@
+<!--========================================================== -->
+<!-- HEAD -->
+<!--========================================================== -->
+
+<%- include('../partials/home/head.ejs', {tituloWeb: 'RESTABLECIMIENTO DE CONTRASENA' }) %>
+
+<!--========================================================== -->
+<!-- NAVBAR -->
+<!--========================================================== -->
+
+<%- include('../partials/home/navbar.ejs') %>
+
+<!--========================================================== -->
+<!-- PORTADA DE INICIO -->
+<!--========================================================== -->
+
+<div class="contenedorCentrado" style="margin-top: 150px;margin-bottom: 50px;">
+    <div class="container-form">
+        <div class="information">
+            <div class="info-childs">
+                <img src="/img/logo/logo-1.png" alt="logo">
+                <h2>¡Restablece tu contraseña!</h2>
+                <p>Ingresa la nueva contraseña en el formulario "Recuerda que la contraseña debe ser minima de 8 digitos".</p>
+            </div>
+        </div>
+        <div class="form-information">
+            <div class="form-information-childs">
+                <h2>Restablecimiento de Contraseña</h2>
+                <form class="form" id="restablecerContrasenaForm" action="/v1/usuarios/restablecerContrasena/<%= token %>" method="POST">
+                    <br>
+                    <div>
+                        <label for="Correo">
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" id="nuevaContraseña" name="nuevaContraseña" placeholder="Nueva contraseña" required>
+                        </label>
+                    </div>
+                    <br>
+                    <div class="btn-Login">
+                        <button type="submit" class="btn btn-primary">Restablecer contraseña</button>
+                        <br>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--========================================================== -->
+<!--FOOTER-->
+<!--========================================================== -->
+
+<%- include('../partials/home/footer.ejs') %>
+
+<!--========================================================== -->
+<!-- MODAL CONTACTO -->
+<!--========================================================== -->
+
+<%- include('../modales/contacto/modalContacto.ejs') %>
+
+<!--========================================================== -->
+<!--MODAL LOGIN-->
+<!--========================================================== -->
+
+<%- include('../modales/loginUsuarios/loginUsuarios.ejs') %>
+
+<!--========================================================== -->
+<!--MODAL REGISTER-->
+<!--========================================================== -->
+
+<%- include('../modales/registroUsuarios/registroUsuarios.ejs') %>
+
+<!--========================================================== -->
+<!--MODAL RECUPERAR CONTRASENA-->
+<!--========================================================== -->
+
+<%- include('../modales/recuperarContrasena/recuperarContrasena.ejs') %>
+
+<!--========================================================== -->
+<!--MODAL TERMINOS Y CONDICIONES-->
+<!--========================================================== -->
+
+<%- include('../modales/terminoYcondiciones/terminosYcondiciones.ejs') %>
+
+<!--========================================================== -->
+<!--MODAL SABER MÁS-->
+<!--========================================================== -->
+
+<%- include('../modales/saberMas/saberMas.ejs') %>

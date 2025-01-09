@@ -1,0 +1,84 @@
+<!--========================================================== -->
+<!-- HEAD -->
+<!--========================================================== -->
+
+<%- include('../../partials/admin/head.ejs', {tituloWeb: 'LISTADO DE VOLUCIONES' }) %>
+
+<!--========================================================== -->
+<!-- NAVBAR -->
+<!--========================================================== -->
+
+<%- include('../../partials/admin/navbar.ejs') %>
+
+<!--========================================================== -->
+<!-- BARRA LATERAL -->
+<!--========================================================== -->
+
+<%- include('../../partials/admin/barraLateral.ejs') %>
+
+<!--========================================================== -->
+<!-- CONTENIDO -->
+<!--========================================================== -->
+
+<div id="layoutSidenav_content">
+    <main>
+        <div class="container-fluid px-4">
+            
+            <div class="container my-5 contenedorCentrado tablas-formularios">
+                <div class="row" style="padding: 20px;">
+
+                    <table id="example" class="table table-striped " >
+                        <caption>
+                            Devoluciones
+                        </caption>
+                        <thead class="texto-centrado">
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Fecha de Devolución</th>
+                                <th scope="col">Motivo</th>
+                                <th scope="col">Productos</th>
+                                <th scope="col">Foto Producto Devuelto</th>
+                                <th scope="col">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <img src="#" style='max-width: 100px;' alt=""/>
+                                </td>
+                                <td>
+                                    <div class="btn-group btn-group-sm" role="group" aria-label="Acciones">
+                                        <a class="btn btn-warning" href="#">Editar</a>
+                                        <a class="btn btn-danger" href="#">
+                                            <i class="fa-solid fa-trash"></i> Eliminar
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <a
+                        href="/v1/devoluciones/registroDevoluciones"
+                        class="btn btn-success btn-crear">
+                        Registrar devolución
+                        <i 
+                        class="fa-solid fa-plus" 
+                        style="margin-left: 9px;">
+                        </i>
+                    </a>
+                </div>
+            </div>        
+
+        </div>
+    </main>
+</div>
+
+<!--========================================================== -->
+<!--FOOTER-->
+<!--========================================================== -->
+
+<%- include('../../partials/admin/footer.ejs') %>

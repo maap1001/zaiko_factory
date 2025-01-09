@@ -1,0 +1,87 @@
+<!--========================================================== -->
+<!-- HEAD -->
+<!--========================================================== -->
+
+<%- include('../partials/home/head.ejs', {tituloWeb: 'RESTABLECIMIENTO DE CONTRASENA' }) %>
+
+<!--========================================================== -->
+<!-- NAVBAR -->
+<!--========================================================== -->
+
+<%- include('../partials/home/navbar.ejs') %>
+
+<!--========================================================== -->
+<!-- PORTADA DE INICIO -->
+<!--========================================================== -->
+
+<div class="contenedorCentrado" style="margin-top: 150px; margin-bottom: 50px;">
+    <div class="container-form">
+        <div class="information">
+            <div class="info-childs">
+                <img src="/img/logo/logo-1.png" alt="Logo">
+                <h2>¡Acceso Restringido!</h2>
+                <p>Debes iniciar sesión para acceder a este módulo.</p>
+            </div>
+        </div>
+        <div class="form-information">
+            <div class="form-information-childs">
+                <h2>Iniciar Sesión</h2>
+                <form class="form">
+                    <br>
+                    <div>
+                        <p>Por favor, introduce tus credenciales para continuar.</p>
+                    </div>
+                    <br>
+                    <div class="btn-Login">
+                        <button type="button" data-bs-toggle="modal" data-bs-target="#login" class="btn btn-primary">Iniciar Sesión</button>
+                        <br>
+                        <a href="/" class="btn btn-warning">Salir</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--========================================================== -->
+<!--FOOTER-->
+<!--========================================================== -->
+
+<%- include('../partials/home/footer.ejs') %>
+
+<!--========================================================== -->
+<!-- MODAL CONTACTO -->
+<!--========================================================== -->
+
+<%- include('../modales/contacto/modalContacto.ejs') %>
+
+<!--========================================================== -->
+<!--MODAL LOGIN-->
+<!--========================================================== -->
+
+<%- include('../modales/loginUsuarios/loginUsuarios.ejs') %>
+
+<!--========================================================== -->
+<!--MODAL REGISTER-->
+<!--========================================================== -->
+
+<%- include('../modales/registroUsuarios/registroUsuarios.ejs') %>
+
+<!--========================================================== -->
+<!--MODAL RECUPERAR CONTRASENA-->
+<!--========================================================== -->
+
+<%- include('../modales/recuperarContrasena/recuperarContrasena.ejs') %>
+
+<!--========================================================== -->
+<!--MODAL TERMINOS Y CONDICIONES-->
+<!--========================================================== -->
+
+<%- include('../modales/terminoYcondiciones/terminosYcondiciones.ejs') %>
+
+<!--========================================================== -->
+<!--MODAL SABER MÁS-->
+<!--========================================================== -->
+
+<%- include('../modales/saberMas/saberMas.ejs') %>

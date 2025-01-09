@@ -1,0 +1,12 @@
+git add .
+git commit -m "algo"
+git pull origin main           (jalar)
+git push origin main           (empuja)
+git pull origin main           (jalar)
+
+
+ctrl shitf  alt  l   ------ comando para formatear texto
+
+
+http://localhost:3000/v1/home
+

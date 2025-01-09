@@ -1,0 +1,66 @@
+<!--========================================================== -->
+<!--MODAL CREAR PROVEEDOR-->
+<!--========================================================== -->
+
+<div class="modal fade" id="crearProveedor" tabindex="-1" aria-labelledby="registerLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+            <div class="container mt-5 p-4">
+                <h2>Registrar Proveedor</h2>
+                <form id="formCrearProveedor">
+                    <div class="mb-3">
+                        <label for="nombreProveedorCrear" class="form-label">Nombre Completo</label>
+                        <input type="text" class="form-control" name="nombreProveedorCrear" id="nombreProveedorCrear" placeholder="Ingresa el nombre completo del proveedor" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="documentoProveedorCrear" class="form-label">Documento (NIT o Cédula)</label>
+                        <input type="text" class="form-control" name="documentoProveedorCrear" id="documentoProveedorCrear" placeholder="Ingresa el documento del proveedor" maxlength="11" minlength="8" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="telefonoProveedorCrear" class="form-label">Teléfono</label>
+                        <input type="text" class="form-control" name="telefonoProveedorCrear" id="telefonoProveedorCrear" placeholder="Ingresa el teléfono del proveedor" minlength="9" maxlength="14" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="correoProveedorCrear" class="form-label">Correo Electrónico</label>
+                        <input type="email" class="form-control" name="correoProveedorCrear" id="correoProveedorCrear" placeholder="Ingresa el correo electrónico" required>
+                    </div>
+                    <div class="mb-3" >
+                        <label for="direccion" class="form-label">Ubicación</label>
+                        <input type="text" class="form-control mb-2" name="direccionProveedorCrear" id="direccionProveedorCrear" placeholder="direccion" required>
+                        <input type="text" class="form-control mb-2" name="ciudadProveedorCrear" id="ciudadProveedorCrear" placeholder="Ciudad" required>
+                        <input type="text" class="form-control mb-2" name="departamentoProveedorCrear" id="departamentoProveedorCrear" placeholder="departamento" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="tipoEmpresa" class="form-label">Tipo de Empresa</label>
+                        <select class="form-select" name="tipoEmpresaProveedorCrear" id="tipoEmpresaProveedorCrear" required>
+                            <option value="" disabled selected>Seleccione el tipo de empresa</option>
+                            <option value="Distribuidor">Distribuidor</option>
+                            <option value="Fabricante">Fabricante</option>
+                            <option value="Comerciante">Comerciante</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="metodoPagoProveedorCrear" class="form-label">Método de Pago</label>
+                        <select class="form-select" name="metodoPagoProveedorCrear" id="metodoPagoProveedorCrear" required>
+                            <option value="" disabled selected>Seleccione el método de pago</option>
+                            <option value="Transferencia">Transferencia</option>
+                            <option value="Cheque">Cheque</option>
+                            <option value="Tarjeta de crédito">Tarjeta de crédito</option>
+                            <option value="Efectivo">Efectivo</option>
+                        </select>
+                    </div>
+                    <div class="d-flex justify-content-between" style="margin-bottom: 10px;">
+                        <button type="submit" class="btn btn-success">Crear Proveedor</button>
+                        <a id="cerrarModalCrearProveedor" class="btn btn-danger">Cancelar</a>
+                    </div>
+                </form>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<!----------------------------SCRIPTS----------------------------->
+
+<script src="/js/admin/proveedores/crearProveedor.js"></script>

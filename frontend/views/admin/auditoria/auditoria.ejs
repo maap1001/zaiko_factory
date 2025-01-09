@@ -1,0 +1,55 @@
+<!--========================================================== -->
+<!-- HEAD -->
+<!--========================================================== -->
+
+<%- include('../../partials/admin/head.ejs', {tituloWeb: 'AUDITORIA' }) %>
+
+<!--========================================================== -->
+<!-- NAVBAR -->
+<!--========================================================== -->
+
+<%- include('../../partials/admin/navbar.ejs') %>
+
+<!--========================================================== -->
+<!-- BARRA LATERAL -->
+<!--========================================================== -->
+
+<%- include('../../partials/admin/barraLateral.ejs') %>
+
+<!--========================================================== -->
+<!-- CONTENIDO -->
+<!--========================================================== -->
+
+<div id="layoutSidenav_content">
+    <main>
+        <div class="container-fluid px-4">
+            
+            <div class="container my-5 contenedorCentrado tablas-formularios">
+                <div class="row" style="padding: 20px;">
+                    <h1 class="mt-4 title-tablas">Auditoria</h1>
+                    <div class="container">
+                        <button type="button" id="backup" class="btn btn-lg">
+                            <i class="bi bi-file-arrow-up"></i> Generar backup de la base de datos
+                        </button>
+                        <button type="button" id="restablecer" class="btn btn-lg">
+                            <i class="bi bi-arrow-clockwise"></i> Restablecer el backup de la base de datos
+                        </button>
+                        <button type="button" id="registrar" class="btn btn-lg">
+                            <i class="bi bi-journal-plus"></i> Registrar log
+                        </button>
+                        <button type="button" id="informe" class="btn btn-lg">
+                            <i class="bi bi-journal-text"></i> Generar informe de log
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+</div>
+
+<!--========================================================== -->
+<!--FOOTER-->
+<!--========================================================== -->
+
+<%- include('../../partials/admin/footer.ejs') %>

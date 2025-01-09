@@ -1,0 +1,28 @@
+<!--========================================================== -->
+<!--MODAL ELIMINAR PROVEEDORES-->
+<!--========================================================== -->
+
+<div class="modal fade" id="eliminarProveedor" tabindex="-1" aria-labelledby="registerLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+            <div class="container p-4 text-center ">
+                <h2>Eliminar Proveedor</h2>
+                <form id="formEliminarProveedor" method="POST">
+                    <input type="hidden" id="proveedorId" name="proveedorId">
+                    <p>¿Estás seguro de que deseas eliminar a este proveedor?
+                        Esta acción es irreversible y no se puede deshacer.</p>
+                    <div class="d-flex justify-content-between">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-danger">Eliminar</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!----------------------------SCRIPTS----------------------------->
+
+<script src="/js/admin/proveedores/eliminarProveedores.js"></script>

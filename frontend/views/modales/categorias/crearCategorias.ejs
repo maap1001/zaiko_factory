@@ -1,0 +1,45 @@
+<!--========================================================== -->
+<!--MODAL CREAR CATEGORIAS-->
+<!--========================================================== -->
+
+<div class="modal fade" id="crearCategoria" tabindex="-1" aria-labelledby="registerLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+            <div class="container mt-5 p-4">
+                <h2>Registrar Categoría</h2>
+                <form id="formCrearCategoria">
+                    <div class="mb-3">
+                        <label for="nombreCategoriaCrear" class="form-label">Nombre de la Categoría</label>
+                        <input type="text" class="form-control" name="nombreCategoriaCrear" id="nombreCategoriaCrear" placeholder="Ingresa el nombre de la categoría" required minlength="5" maxlength="50">
+                    </div>
+                    <div class="mb-3">
+                        <label for="descripcionCategoriaCrear" class="form-label">Descripción</label>
+                        <textarea class="form-control" name="descripcionCategoriaCrear" id="descripcionCategoriaCrear" rows="3" placeholder="Ingresa la descripción de la categoría" required minlength="10" maxlength="200"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="presentacionCategoriaCrear" class="form-label">Presentación</label>
+                        <select class="form-select" name="presentacionCategoriaCrear" id="presentacionCategoriaCrear" required>
+                            <option value="" disabled selected>Seleccione la presentación</option>
+                            <option value="frascos">Frascos</option>
+                            <option value="bolsas">Bolsas</option>
+                            <option value="paquetes">Paquetes</option>
+                            <option value="cajas">Cajas</option>
+                            <option value="pacas">Pacas</option>
+                        </select>
+                    </div>
+                    <div class="d-flex justify-content-between" style="margin-bottom: 10px;">
+                        <button type="submit" class="btn btn-success">Crear Categoría</button>
+                        <a id="cerrarModalCrearCategoria" class="btn btn-danger">Cancelar</a>
+                    </div>
+                </form>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+
+<!----------------------------SCRIPTS----------------------------->
+
+<script src="/js/admin/categorias/crearCategorias.js"></script>

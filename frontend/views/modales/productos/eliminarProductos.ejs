@@ -1,0 +1,28 @@
+<!--========================================================== -->
+<!--MODAL ELIMINAR USUARIOS-->
+<!--========================================================== -->
+
+<div class="modal fade" id="eliminarProducto" tabindex="-1" aria-labelledby="registerLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+            <div class="container p-4 text-center ">
+                <h2>Eliminar Producto</h2>
+                <form id="formEliminarProducto" method="POST">
+                    <input type="hidden" id="productoId" name="productoId">
+                    <p>¿Estás seguro de que deseas eliminar a este producto?
+                        Esta acción es irreversible y no se puede deshacer.</p>
+                    <div class="d-flex justify-content-between">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-danger">Eliminar</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!----------------------------SCRIPTS----------------------------->
+
+<script src="/js/admin/productos/eliminarProducto.js"></script>

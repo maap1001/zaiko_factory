@@ -1,0 +1,85 @@
+<!--========================================================== -->
+<!-- HEAD -->
+<!--========================================================== -->
+
+<%- include('../partials/home/head.ejs', {tituloWeb: 'RESTABLECIMIENTO DE CONTRASENA' }) %>
+
+<!--========================================================== -->
+<!-- NAVBAR -->
+<!--========================================================== -->
+
+<%- include('../partials/home/navbar.ejs') %>
+
+<!--========================================================== -->
+<!-- PORTADA DE INICIO -->
+<!--========================================================== -->
+
+<div class="contenedorCentrado" style="margin-top: 150px;margin-bottom: 50px;">
+    <div class="container-form">
+        <div class="information">
+            <div class="info-childs">
+                <img src="/img/logo/logo-1.png" alt="logo">
+                <h2>¡Token inválido o expirado!</h2>
+                <p>Lo sentimos, el enlace que has utilizado para restablecer tu contraseña ya no es válido. Por favor, intenta solicitar un nuevo enlace.</p>
+            </div>
+        </div>
+        <div class="form-information">
+            <div class="form-information-childs">
+                <h2>Restablecimiento de Contraseña</h2>
+                <form class="form">
+                    <br>
+                    <div>
+                        <p><%= mensaje %></p>
+                    </div>
+                    <br>
+                    <div class="btn-Login">
+                        <button type="button" data-bs-toggle="modal" data-bs-target="#recuperarContraseña" class="btn btn-primary">Solicitar un nuevo enlace de restablecimiento</button>
+                        <br>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--========================================================== -->
+<!--FOOTER-->
+<!--========================================================== -->
+
+<%- include('../partials/home/footer.ejs') %>
+
+<!--========================================================== -->
+<!-- MODAL CONTACTO -->
+<!--========================================================== -->
+
+<%- include('../modales/contacto/modalContacto.ejs') %>
+
+<!--========================================================== -->
+<!--MODAL LOGIN-->
+<!--========================================================== -->
+
+<%- include('../modales/loginUsuarios/loginUsuarios.ejs') %>
+
+<!--========================================================== -->
+<!--MODAL REGISTER-->
+<!--========================================================== -->
+
+<%- include('../modales/registroUsuarios/registroUsuarios.ejs') %>
+
+<!--========================================================== -->
+<!--MODAL RECUPERAR CONTRASENA-->
+<!--========================================================== -->
+
+<%- include('../modales/recuperarContrasena/recuperarContrasena.ejs') %>
+
+<!--========================================================== -->
+<!--MODAL TERMINOS Y CONDICIONES-->
+<!--========================================================== -->
+
+<%- include('../modales/terminoYcondiciones/terminosYcondiciones.ejs') %>
+
+<!--========================================================== -->
+<!--MODAL SABER MÁS-->
+<!--========================================================== -->
+
+<%- include('../modales/saberMas/saberMas.ejs') %>

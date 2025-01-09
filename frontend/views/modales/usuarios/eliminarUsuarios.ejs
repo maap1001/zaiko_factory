@@ -1,0 +1,28 @@
+<!--========================================================== -->
+<!--MODAL ELIMINAR USUARIOS-->
+<!--========================================================== -->
+
+<div class="modal fade" id="eliminarUsuario" tabindex="-1" aria-labelledby="registerLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+            <div class="container p-4 text-center ">
+                <h2>Eliminar Usuario</h2>
+                <form id="formEliminarUsuario" method="POST">
+                    <input type="hidden" id="usuarioId" name="usuarioId">
+                    <p>¿Estás seguro de que deseas eliminar a este proveedor?
+                        Esta acción es irreversible y no se puede deshacer.</p>
+                    <div class="d-flex justify-content-between">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-danger">Eliminar</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!----------------------------SCRIPTS----------------------------->
+
+<script src="/js/admin/usuarios/eliminarUsuarios.js"></script>

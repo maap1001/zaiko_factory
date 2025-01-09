@@ -1,0 +1,55 @@
+<!--========================================================== -->
+<!--MODAL DETALLE USUARIOS-->
+<!--========================================================== -->
+
+<div class="modal fade" id="detalleUsuario" tabindex="-1" aria-labelledby="registerLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content modal-detalle">
+
+            <div class="container mt-5 formDetalle">
+                <h2>Detalle Usuario</h2>
+                <hr>
+                <table id="detalleUsuario" class="table table-striped" enctype="multipart/form-data">
+                    <tr>
+                        <th>Id:</th>
+                        <td id="detalleUsuarioId"></td>
+                    </tr>
+                    <tr>
+                        <th>Nombre:</th>
+                        <td id="detalleUsuarioNombre"></td>
+                    </tr>
+                    <tr>
+                        <th>Correo:</th>
+                        <td id="detalleUsuarioCorreo"></td>
+                    </tr>
+                    <tr>
+                        <th>Contraseña:</th>
+                        <td id="detalleUsuarioContraseña"></td>
+                    </tr>
+                    <tr>
+                        <th>Rol:</th>
+                        <td id="detalleUsuarioRol"></td>
+                    </tr>
+                    <tr>
+                        <th>Foto:</th>
+                        <td>
+                            <img id="detalleUsuarioFoto" alt="Usuario" style="width: 100px; height: auto;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Fecha de creacion:</th>
+                        <td id="detalleUsuarioCreacion"></td>
+                    </tr>
+                    <tr>
+                        <th>Ultima fecha de modificación:</th>
+                        <td id="detalleUsuarioModificacion"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!----------------------------SCRIPTS----------------------------->
+
+<script src="/js/admin/usuarios/detalleUsuarios.js"></script>

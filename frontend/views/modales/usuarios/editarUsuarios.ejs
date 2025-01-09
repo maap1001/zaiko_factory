@@ -1,0 +1,45 @@
+<!--========================================================== -->
+<!--MODALE EDITAR USUARIOS-->
+<!--========================================================== -->
+
+<div class="modal fade" id="editarUsuario" tabindex="-1" aria-labelledby="registerLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="container mt-5 p-4">
+                <h2>Editar Usuario</h2>
+                <form id="editarFormularioUsuario" method="POST" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label for="editarUsuarioNombreCompleto" class="form-label">Nombre Completo</label>
+                        <input type="text" class="form-control" id="editarUsuarioNombreCompleto"
+                            name="editarUsuarioNombreCompleto" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="editarUsuarioCorreo" class="form-label">Correo</label>
+                        <input type="email" class="form-control" id="editarUsuarioCorreo" name="editarUsuarioCorreo"
+                            required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="editarUsuarioRol" class="form-label">Rol</label>
+                        <select class="form-select" id="editarUsuarioRol" name="editarUsuarioRol" required>
+                            <option value="admin">Admin</option>
+                            <option value="user">User</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="editarUsuarioFoto" class="form-label">Foto</label>
+                        <input type="file" class="form-control" id="editarUsuarioFoto" name="imagen">
+                    </div>
+                    <div class="d-flex justify-content-between" style="margin-bottom: 10px;">
+                        <button type="submit" class="btn btn-success">Guardar Cambios <i class="fa-solid fa-check"
+                                style="margin-left: 10px;"></i></button>
+                        <a id="cerrarModalEditarUsuario" class="btn btn-danger">Cancelar</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!----------------------------SCRIPTS----------------------------->
+
+<script src="/js/admin/usuarios/editarUsuarios.js"></script>

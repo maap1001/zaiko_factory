@@ -1,0 +1,119 @@
+<!--========================================================== -->
+<!-- HEAD -->
+<!--========================================================== -->
+
+<%- include('../../partials/admin/head.ejs', {tituloWeb: 'LISTADO PROVEEDORES' }) %>
+
+<!--========================================================== -->
+<!-- NAVBAR -->
+<!--========================================================== -->
+
+<%- include('../../partials/admin/navbar.ejs') %>
+
+<!--========================================================== -->
+<!-- BARRA LATERAL -->
+<!--========================================================== -->
+
+<%- include('../../partials/admin/barraLateral.ejs') %>
+
+<!--========================================================== -->
+<!-- CONTENIDO -->
+<!--========================================================== -->
+
+<div id="layoutSidenav_content">
+    <div class="container-fluid px-4">
+
+        <div class="container my-5 contenedorCentrado tablas-formularios">
+            <div class="row" style="padding: 20px;">
+            
+                <table id="example" class="table table-striped " >
+                    <caption>
+                        Proveedores
+                    </caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Documento</th> 
+                            <th scope="col">Teléfono</th>  
+                            <th scope="col">Correo</th>
+                            <th scope="col">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% if (proveedores.length > 0) { %>
+                            <% proveedores.forEach(proveedor => { %>
+                                <tr>
+                                    <td><%= proveedor.nombre %></td>
+                                    <td><%= proveedor.documento %></td>
+                                    <td><%= proveedor.telefono %></td>
+                                    <td><%= proveedor.correo %></td>
+                                    <td>
+                                        <div class="btn-group btn-group-sm" role="group" aria-label="Acciones">
+                                            <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#detalleProveedor"
+                                                data-id="<%= proveedor._id %>">
+                                                <i class="fa-solid fa-eye"></i> Detalles
+                                            </a>
+                                            <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editarProveedor"
+                                                data-id="<%= proveedor._id %>"
+                                                data-nombre="<%= proveedor.nombre %>"
+                                                data-documento="<%= proveedor.documento %>"
+                                                data-telefono="<%= proveedor.telefono %>"
+                                                data-correo="<%= proveedor.correo %>"
+                                                data-direccion="<%= proveedor.ubicacion.direccion %>"
+                                                data-ciudad="<%= proveedor.ubicacion.ciudad %>"
+                                                data-departamento="<%= proveedor.ubicacion.departamento %>"
+                                                data-tipoempresa="<%= proveedor.tipoEmpresa %>"
+                                                data-metodopago="<%= proveedor.metodoPago %>">
+                                                <i class="fa-solid fa-user-pen"></i> Editar
+                                            </button>
+                                            <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#eliminarProveedor"
+                                                data-id="<%= proveedor._id %>">
+                                                <i class="fa-solid fa-trash"></i> Eliminar
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            <% }) %>
+                        <% } %>
+                        
+                    </tbody>
+                </table>
+                <a
+                    data-bs-toggle="modal" data-bs-target="#crearProveedor"
+                    class="btn btn-success btn-crear">
+                    Registrar proveedor
+                    <i 
+                    class="fa-solid fa-plus" 
+                    style="margin-left: 9px;">
+                    </i>
+                </a>
+            </div>
+        </div>
+        
+    </div>    
+</div>
+
+<!--========================================================== -->
+<!--FOOTER-->
+<!--========================================================== -->
+<%- include('../../partials/admin/footer.ejs') %>
+
+<!--========================================================== -->
+<!--MODAL CREAR PROVEEDOR-->
+<!--========================================================== -->
+<%- include('../../modales/proveedores/crearProveedor.ejs') %>
+
+<!--========================================================== -->
+<!--MODAL DETALLES PROVEEDOR-->
+<!--========================================================== -->
+<%- include('../../modales/proveedores/detalleProveedores.ejs') %>
+
+<!--========================================================== -->
+<!--MODAL DETALLES PROVEEDOR-->
+<!--========================================================== -->
+<%- include('../../modales/proveedores/editarProveedores.ejs') %>
+
+<!--========================================================== -->
+<!--MODAL ELIMINAR PROVEEDOR-->
+<!--========================================================== -->
+<%- include('../../modales/proveedores/eliminarProveedores.ejs') %>

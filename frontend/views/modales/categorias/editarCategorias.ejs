@@ -1,0 +1,41 @@
+<!--========================================================== -->
+<!--MODALE EDITAR CATEGORIAS-->
+<!--========================================================== -->
+
+<div class="modal fade" id="editarCategoria" tabindex="-1" aria-labelledby="editarCategoriaLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="container mt-5 p-4">
+                <h2>Editar Categoría</h2>
+                <form id="editarCategoriaForm">
+                    <div class="mb-3">
+                        <label for="editarCategoriaNombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="editarCategoriaNombre" name="editarCategoriaNombre" required minlength="5" maxlength="50">
+                    </div>
+                    <div class="mb-3">
+                        <label for="editarCategoriaDescripcion" class="form-label">Descripción</label>
+                        <textarea class="form-control" id="editarCategoriaDescripcion" name="editarCategoriaDescripcion" required minlength="10" maxlength="200"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="editarCategoriaPresentacion" class="form-label">Presentación</label>
+                        <select class="form-select" id="editarCategoriaPresentacion" name="editarCategoriaPresentacion" required>
+                            <option value="frascos">Frascos</option>
+                            <option value="bolsas">Bolsas</option>
+                            <option value="paquetes">Paquetes</option>
+                            <option value="cajas">Cajas</option>
+                            <option value="pacas">Pacas</option>
+                        </select>
+                    </div>
+                    <div class="d-flex justify-content-between" style="margin-bottom: 10px;">
+                        <button type="submit" class="btn btn-success">Guardar Cambios <i class="fa-solid fa-check" style="margin-left: 10px;"></i></button>
+                        <a id="cerrarModalEditarCategoria" class="btn btn-danger">Cancelar</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!----------------------------SCRIPTS----------------------------->
+
+<script src="/js/admin/categorias/editarCategorias.js"></script>

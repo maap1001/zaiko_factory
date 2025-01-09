@@ -1,0 +1,111 @@
+<!--========================================================== -->
+<!-- HEAD -->
+<!--========================================================== -->
+
+<%- include('../../partials/admin/head.ejs', {tituloWeb: 'USUARIOS' }) %>
+
+<!--========================================================== -->
+<!-- NAVBAR -->
+<!--========================================================== -->
+
+<%- include('../../partials/admin/navbar.ejs') %>
+
+<!--========================================================== -->
+<!-- BARRA LATERAL -->
+<!--========================================================== -->
+
+<%- include('../../partials/admin/barraLateral.ejs') %>
+
+<!--========================================================== -->
+<!-- CONTENIDO -->
+<!--========================================================== -->
+
+<div id="layoutSidenav_content">
+    <main>
+        <div class="container-fluid px-4">
+            
+            <div class="container my-5 contenedorCentrado tablas-formularios">
+                <div class="row" style="padding: 20px;">
+                    
+                    <table id="example" class="table table-striped ">
+                        <caption>
+                            Usuarios
+                        </caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Correo</th>
+                                <th scope="col">Rol</th>
+                                <th scope="col">Foto</th>
+                                <th scope="col">Acciones</th>
+                            </tr>
+                        </thead>
+            
+                        <tbody>
+
+                            <% if (usuarios.length > 0) { %>
+                                <% usuarios.forEach(usuario => { %>
+                                    <tr >
+                                        <td><%= usuario.nombreCompleto %></td> 
+                                        <td><%= usuario.correo %></td>
+                                        <td><%= usuario.rol %></td>
+                                        <% if (usuario.foto) { %>
+                                            <td><img src="/uploads/<%= usuario.foto %>" alt="usuario" style="width: 100px; height: auto;"></td>
+                                        <% } else { %>
+                                            <td><img src="/img/default/user.png" alt="usuario" style="width: 100px; height: auto;"></td>
+                                        <% } %>                                        
+                                        <td >
+                                            <div class="btn-group btn-group-sm" role="group" aria-label="Acciones">
+                                                <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#detalleUsuario" data-id="<%= usuario._id %>">
+                                                    <i class="fa-solid fa-eye"></i> Detalles
+                                                </a>
+                                                <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editarUsuario"
+                                                    data-id="<%= usuario._id %>"
+                                                    data-nombre="<%= usuario.nombreCompleto %>"
+                                                    data-correo="<%= usuario.correo %>"
+                                                    data-rol="<%= usuario.rol %>"
+                                                    data-foto="<%= usuario.foto %>">
+                                                    <i class="fa-solid fa-user-pen"></i> Editar
+                                                </button>
+                                                <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#eliminarUsuario"
+                                                    data-id="<%= usuario._id %>">
+                                                    <i class="fa-solid fa-trash"></i> Eliminar
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                <% }) %>                                  
+                            <% } %>
+                            
+                        </tbody>
+                    </table>
+                    
+                </div>        
+
+        </div>
+    </main>
+</div>
+
+<!--========================================================== -->
+<!--FOOTER-->
+<!--========================================================== -->
+
+<%- include('../../partials/admin/footer.ejs') %>
+
+<!--========================================================== -->
+<!-- MODAL DETALLES USUARIOS -->
+<!--========================================================== -->
+
+<%- include('../../modales/usuarios/detalleUsuarios.ejs') %>
+
+<!--========================================================== -->
+<!-- MODAL EDITAR USUARIOS -->
+<!--========================================================== -->
+
+<%- include('../../modales/usuarios/editarUsuarios.ejs') %>
+
+<!--========================================================== -->
+<!-- MODAL ELIMINAR USUARIOS -->
+<!--========================================================== -->
+
+<%- include('../../modales/usuarios/eliminarUsuarios.ejs') %>

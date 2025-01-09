@@ -1,0 +1,144 @@
+<!--========================================================== -->
+<!-- HEAD -->
+<!--========================================================== -->
+
+<%- include('../../partials/admin/head.ejs', {tituloWeb: 'LISTADO DE PRODUCTOS' }) %>
+
+<!--========================================================== -->
+<!-- NAVBAR -->
+<!--========================================================== -->
+
+<%- include('../../partials/admin/navbar.ejs') %>
+
+<!--========================================================== -->
+<!-- BARRA LATERAL -->
+<!--========================================================== -->
+
+<%- include('../../partials/admin/barraLateral.ejs') %>
+
+<!--========================================================== -->
+<!-- CONTENIDO -->
+<!--========================================================== -->
+
+<div id="layoutSidenav_content">
+    <main>
+        <div class="container-fluid px-4">
+            
+            <div class="container my-5 contenedorCentrado tablas-formularios">
+                <div class="row" style="padding: 20px;">
+            
+                    <table id="example" class="table table-striped " >
+                        <caption>
+                            Productos
+                        </caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Foto Producto</th>
+                                <th scope="col">Precio</th>
+                                <th scope="col">Cantidad</th>
+                                <th scope="col">Fecha de Vencimiento</th>
+                                <th scope="col">Acciones</th>
+                            </tr>
+                        </thead>
+            
+                        <tbody>
+                            <% if (productos.length > 0) { %>
+                                <% productos.forEach(producto => { %>
+
+                                    <tr>
+                                        <td><%= producto.nombre %></td> 
+                                        <% if (producto.foto) { %>
+                                            <td><img src="/uploads/<%= producto.foto %>" alt="producto" style="width: 100px; height: auto;"></td>
+                                        <% } else { %>
+                                            <td><img src="/img/default/default.png" alt="producto" style="width: 100px; height: auto;"></td>
+                                        <% } %>   
+                                        <td><%= producto.precio %></td>
+                                        <td><%= producto.cantidad %></td>
+                                        <td>
+                                            <% if (producto.fechaVencimiento) { %>
+                                                <%= new Date(producto.fechaVencimiento).toLocaleDateString('es-CO', { 
+                                                    day: '2-digit', 
+                                                    month: '2-digit', 
+                                                    year: 'numeric' 
+                                                }) %>
+                                            <% } else { %>
+                                                N/A
+                                            <% } %>
+                                        </td>
+                                        <td>
+                                            <div class="btn-group btn-group-sm" role="group" aria-label="Acciones">
+                                                <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#detalleProducto"
+                                                    data-id="<%= producto._id %>">
+                                                    <i class="fa-solid fa-eye"></i> Detalles
+                                                </a>
+                                                <a class="btn btn-warning" 
+                                                    data-bs-toggle="modal" 
+                                                    data-bs-target="#editarProducto"
+                                                    data-id="<%= producto._id %>"
+                                                    data-nombre="<%= producto.nombre %>"
+                                                    data-foto="<%= producto.foto %>"
+                                                    data-precio="<%= producto.precio %>"
+                                                    data-cantidad="<%= producto.cantidad %>"
+                                                    data-fechavencimiento="<%= producto.fechaVencimiento ? producto.fechaVencimiento.toISOString().split('T')[0] : '' %>"
+                                                    data-categoria="<%= producto.categoria.nombre %>"  
+                                                    data-proveedor="<%= producto.proveedor.nombre %>" >
+                                                    <i class="fa-solid fa-user-pen"></i> Editar
+                                                </a>
+
+                                                <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#eliminarProducto"
+                                                    data-id="<%= producto._id %>">
+                                                    <i class="fa-solid fa-trash"></i> Eliminar
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                 
+                                <% }) %>
+                            <% } %>
+                        </tbody>
+                    </table>
+                    <a
+                        data-bs-toggle="modal" data-bs-target="#crearProducto"
+                        class="btn btn-success btn-crear">
+                        Registrar producto
+                        <i 
+                        class="fa-solid fa-plus" 
+                        style="margin-left: 9px;">
+                        </i>
+                    </a>
+                </div>        
+
+        </div>
+    </main>
+</div>
+
+<!--========================================================== -->
+<!--FOOTER-->
+<!--========================================================== -->
+
+<%- include('../../partials/admin/footer.ejs') %>
+
+<!--========================================================== -->
+<!--MODAL CREAR PRODUCTO-->
+<!--========================================================== -->
+
+<%- include('../../modales/productos/crearProductos.ejs') %>
+
+<!--========================================================== -->
+<!--MODAL DETALLE PRODUCTO-->
+<!--========================================================== -->
+
+<%- include('../../modales/productos/detalleProductos.ejs') %>
+
+<!--========================================================== -->
+<!--MODAL EDITAR PRODUCTO-->
+<!--========================================================== -->
+
+<%- include('../../modales/productos/editarProductos.ejs') %>
+
+<!--========================================================== -->
+<!--MODAL ELIMINAR PRODUCTO-->
+<!--========================================================== -->
+
+<%- include('../../modales/productos/eliminarProductos.ejs') %>

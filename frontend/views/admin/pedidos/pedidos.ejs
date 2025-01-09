@@ -1,0 +1,124 @@
+<!--========================================================== -->
+<!-- HEAD -->
+<!--========================================================== -->
+
+<%- include('../../partials/admin/head.ejs', {tituloWeb: 'LISTADO DE PEDIDOS' }) %>
+
+<!--========================================================== -->
+<!-- NAVBAR -->
+<!--========================================================== -->
+
+<%- include('../../partials/admin/navbar.ejs') %>
+
+<!--========================================================== -->
+<!-- BARRA LATERAL -->
+<!--========================================================== -->
+
+<%- include('../../partials/admin/barraLateral.ejs') %>
+
+<!--========================================================== -->
+<!-- CONTENIDO -->
+<!--========================================================== -->
+
+<div id="layoutSidenav_content">
+    <main>
+        <div class="container-fluid px-4">
+            
+            <div class="container my-5 contenedorCentrado tablas-formularios">
+                <div class="row" style="padding: 20px;">
+                    <table id="example" class="table table-striped">
+                        <caption>
+                            Pedidos
+                        </caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Cliente</th>
+                                <th scope="col">Fecha de Pedido</th>
+                                <th scope="col">Total</th>
+                                <th scope="col">Estado</th>
+                                <th scope="col">Dirección de Entrega</th>
+                                <th scope="col">Método de Pago</th>
+                                <th scope="col">Productos</th> 
+                                <th scope="col">Acciones</th>
+                            </tr>
+                        </thead>
+                    
+                        <tbody>
+                            <% if (pedidos.length > 0) { %>
+                                <% pedidos.forEach(pedido => { %>
+                    
+                                    <tr>
+                                        <td><%= pedido.cliente.nombre %></td> 
+                                        <td>
+                                            <%= new Date(pedido.fechaPedido).toLocaleDateString('es-CO', { 
+                                                day: '2-digit', 
+                                                month: '2-digit', 
+                                                year: 'numeric' 
+                                            }) %>
+                                        </td>
+                                        <td><%= pedido.total %></td>
+                                        <td><%= pedido.estado %></td>
+                                        <td><%= pedido.direccionEntrega %></td>
+                                        <td><%= pedido.metodoPago %></td>
+                                        <td>
+                                            <ul>
+                                                <% pedido.productos.forEach(item => { %>
+                                                    <li>
+                                                        <%= item.producto.nombre %> (Cantidad: <%= item.cantidad %>, Precio Unitario: <%= item.precioUnitario %>, Subtotal: <%= item.subtotal %>)
+                                                    </li>
+                                                <% }) %>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <div class="btn-group btn-group-sm" role="group" aria-label="Acciones">
+                                                <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#detallePedido"
+                                                    data-id="<%= pedido._id %>">
+                                                    <i class="fa-solid fa-eye"></i> Detalles
+                                                </a>
+                                                <a class="btn btn-warning" 
+                                                    data-bs-toggle="modal" 
+                                                    data-bs-target="#editarPedido"
+                                                    data-id="<%= pedido._id %>"
+                                                    data-cliente="<%= pedido.cliente.nombre %>"
+                                                    data-fecha="<%= pedido.fechaPedido.toISOString().split('T')[0] %>"
+                                                    data-total="<%= pedido.total %>"
+                                                    data-estado="<%= pedido.estado %>"
+                                                    data-direccion="<%= pedido.direccionEntrega %>"
+                                                    data-metodopago="<%= pedido.metodoPago %>">
+                                                    <i class="fa-solid fa-user-pen"></i> Editar
+                                                </a>
+                    
+                                                <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#eliminarPedido"
+                                                    data-id="<%= pedido._id %>">
+                                                    <i class="fa-solid fa-trash"></i> Eliminar
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                    
+                                <% }) %>
+                            <% } %>
+                        </tbody>
+                    </table>
+                    <a
+                        data-bs-toggle="modal" data-bs-target="#crearPedido"
+                        class="btn btn-success btn-crear">
+                        Registrar pedido
+                        <i 
+                        class="fa-solid fa-plus" 
+                        style="margin-left: 9px;">
+                        </i>
+                    </a>
+                    
+                </div>
+            </div>
+                    
+        </div>
+    </main>
+</div>
+
+<!--========================================================== -->
+<!--FOOTER-->
+<!--========================================================== -->
+
+<%- include('../../partials/admin/footer.ejs') %>

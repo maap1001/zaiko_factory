@@ -1,0 +1,44 @@
+<!--========================================================== -->
+<!-- MODAL EDITAR INVENTARIO -->
+<!--========================================================== -->
+
+<div class="modal fade" id="editarInventario" tabindex="-1" aria-labelledby="editarInventarioLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+            <div class="container mt-5 p-4">
+                <h2>Editar Inventario</h2>
+                <form id="editarInventarioForm">
+                    <div class="mb-3">
+                        <label for="editarInventarioCantidad" class="form-label">Cantidad</label>
+                        <input type="number" class="form-control" id="editarInventarioCantidad" name="editarInventarioCantidad" required min="0">
+                    </div>
+                    <div class="mb-3">
+                        <label for="editarInventarioUbicacion" class="form-label">Ubicación</label>
+                        <select class="form-select" id="editarInventarioUbicacion" name="editarInventarioUbicacion" required>
+                            <option value="">Seleccione Ubicación</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="editarInventarioProducto" class="form-label">Producto Asociado</label>
+                        <select class="form-select" id="editarInventarioProducto" name="editarInventarioProducto" required>
+                            <option value="">Seleccione Producto</option>
+                        </select>
+                    </div>
+                    <div class="d-flex justify-content-between" style="margin-bottom: 10px;">
+                        <button type="submit" class="btn btn-success">Guardar Cambios <i class="fa-solid fa-check"
+                                style="margin-left: 10px;"></i></button>
+                        <a id="cerrarModalEditarInventario" class="btn btn-danger">Cancelar</a>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!------------------------------SCRIPTS----------------------------->
+
+<script src="/js/admin/inventario/editarInventario.js"></script>
+
+<script src="/js/admin/inventario/selectsEditar.js"></script>

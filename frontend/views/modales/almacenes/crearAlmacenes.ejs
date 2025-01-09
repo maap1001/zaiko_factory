@@ -1,0 +1,66 @@
+<!--========================================================== -->
+<!-- MODAL CREAR ALMACÉN -->
+<!--========================================================== -->
+<div class="modal fade" id="crearAlmacen" tabindex="-1" aria-labelledby="registerLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+            <div class="container mt-5 p-4">
+                <h2>Registrar Ubicación de Almacén</h2>
+                <form id="formCrearAlmacen">
+                    <div class="mb-3">
+                        <label for="codigoAlmacenCrear" class="form-label">Código de la Ubicación</label>
+                        <input type="text" class="form-control" name="codigoAlmacenCrear" id="codigoAlmacenCrear" placeholder="Ingresa el código de la ubicación" required minlength="3" maxlength="10">
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="pasilloAlmacenCrear" class="form-label">Pasillo</label>
+                        <input type="text" class="form-control" name="pasilloAlmacenCrear" id="pasilloAlmacenCrear" placeholder="Ingresa el número de pasillo" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="seccionAlmacenCrear" class="form-label">Sección</label>
+                        <input type="text" class="form-control" name="seccionAlmacenCrear" id="seccionAlmacenCrear" placeholder="Ingresa la sección" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="estanteAlmacenCrear" class="form-label">Número de Estante</label>
+                        <input type="number" class="form-control" name="estanteAlmacenCrear" id="estanteAlmacenCrear" placeholder="Ingresa el número de estante" required min="1">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="nivelAlmacenCrear" class="form-label">Nivel</label>
+                        <input type="number" class="form-control" name="nivelAlmacenCrear" id="nivelAlmacenCrear" placeholder="Ingresa el nivel" required min="1">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="capacidadAlmacenCrear" class="form-label">Capacidad</label>
+                        <input type="number" class="form-control" name="capacidadAlmacenCrear" id="capacidadAlmacenCrear" placeholder="Ingresa la capacidad máxima" required min="1">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="ocupacionAlmacenCrear" class="form-label">Ocupación Actual</label>
+                        <input type="number" class="form-control" name="ocupacionAlmacenCrear" id="ocupacionAlmacenCrear" placeholder="Ingresa la ocupación actual" required min="0">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="productoAlmacenCrear" class="form-label">Producto (Opcional)</label>
+                        <select class="form-select" name="productoAlmacenCrear" id="productoAlmacenCrear">
+                            <option value="" disabled selected>Seleccione un producto</option>
+                        </select>
+                    </div>
+
+                    <div class="d-flex justify-content-between" style="margin-bottom: 10px;">
+                        <button type="submit" class="btn btn-success">Crear Ubicación</button>
+                        <a id="cerrarModalCrearAlmacen" class="btn btn-danger">Cancelar</a>
+                    </div>
+                </form>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<!----------------------------SCRIPTS----------------------------->
+
+<script src="/js/admin/almacenes/crearAlmacenes.js"></script>

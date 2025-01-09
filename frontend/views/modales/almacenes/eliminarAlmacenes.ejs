@@ -1,0 +1,27 @@
+<!--========================================================== -->
+<!--MODAL ELIMINAR ALMACÉN-->
+<!--========================================================== -->
+
+<div class="modal fade" id="eliminarAlmacen" tabindex="-1" aria-labelledby="eliminarAlmacenLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+            <div class="container p-4 text-center">
+                <h2>Eliminar Almacén</h2>
+                <form id="formEliminarAlmacen" method="POST">
+                    <input type="hidden" id="almacenId" name="almacenId">
+                    <p>¿Estás seguro de que deseas eliminar este almacén? Esta acción es irreversible y no se puede deshacer.</p>
+                    <div class="d-flex justify-content-between">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-danger">Eliminar</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!----------------------------SCRIPTS----------------------------->
+
+<script src="/js/admin/almacenes/eliminarAlmacenes.js"></script>

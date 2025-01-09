@@ -1,0 +1,45 @@
+<!--========================================================== -->
+<!-- MODAL CREAR CLIENTE -->
+<!--========================================================== -->
+
+<div class="modal fade" id="crearCliente" tabindex="-1" aria-labelledby="registerLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+            <div class="container mt-5 p-4">
+                <h2>Registrar Cliente</h2>
+                <form id="formCrearCliente">
+                    <div class="mb-3">
+                        <label for="nombreClienteCrear" class="form-label">Nombre Completo</label>
+                        <input type="text" class="form-control" name="nombreClienteCrear" id="nombreClienteCrear" placeholder="Ingresa el nombre completo" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="documentoClienteCrear" class="form-label">Documento</label>
+                        <input type="text" class="form-control" name="documentoClienteCrear" id="documentoClienteCrear" placeholder="Ingresa su documento" required maxlength="11">
+                    </div>
+                    <div class="mb-3">
+                        <label for="telefonoClienteCrear" class="form-label">Teléfono</label>
+                        <input type="text" class="form-control" name="telefonoClienteCrear" id="telefonoClienteCrear" placeholder="Ingresa el teléfono" required minlength="9" maxlength="14">
+                    </div>
+                    <div class="mb-3">
+                        <label for="correoClienteCrear" class="form-label">Correo</label>
+                        <input type="email" class="form-control" name="correoClienteCrear" id="correoClienteCrear" placeholder="Ingresa el correo" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="direccionClienteCrear" class="form-label">Dirección</label>
+                        <input type="text" class="form-control" name="direccionClienteCrear" id="direccionClienteCrear" placeholder="Ingresa la dirección">
+                    </div>
+                    <div class="d-flex justify-content-between" style="margin-bottom: 10px;">
+                        <button type="submit" class="btn btn-success">Crear Cliente</button>
+                        <a id="cerrarModalCrearCliente" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</a>
+                    </div>
+                </form>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<!----------------------------SCRIPTS----------------------------->
+
+<script src="/js/admin/clientes/crearCliente.js"></script>

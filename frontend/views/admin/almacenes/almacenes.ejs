@@ -1,0 +1,119 @@
+<!--========================================================== -->
+<!-- HEAD -->
+<!--========================================================== -->
+
+<%- include('../../partials/admin/head.ejs', {tituloWeb: 'PROVEEDORES' }) %>
+
+<!--========================================================== -->
+<!-- NAVBAR -->
+<!--========================================================== -->
+
+<%- include('../../partials/admin/navbar.ejs') %>
+
+<!--========================================================== -->
+<!-- BARRA LATERAL -->
+<!--========================================================== -->
+
+<%- include('../../partials/admin/barraLateral.ejs') %>
+
+<!--========================================================== -->
+<!-- CONTENIDO -->
+<!--========================================================== -->
+
+<div id="layoutSidenav_content">
+    <main>
+        <div class="container-fluid px-4">
+            <div class="container my-5 contenedorCentrado tablas-formularios">
+                <div class="row" style="padding: 20px;">
+                    <table id="example" class="table table-striped">
+                        <caption>
+                            Almacenes
+                        </caption>
+                        <thead class="texto-centrado">
+                            <tr>
+                                <th scope="col">codigo</th> 
+                                <th scope="col">pasillo</th> 
+                                <th scope="col">seccion</th> 
+                                <th scope="col">estante</th> 
+                                <th scope="col">nivel</th> 
+                                <th scope="col">capacidad</th> 
+                                <th scope="col">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>    
+                            <% almacenes.forEach(almacen => { %>
+                                <tr>
+                                    <td><%= almacen.codigo %></td>
+                                    <td><%= almacen.pasillo %></td> 
+                                    <td><%= almacen.seccion %></td>
+                                    <td><%= almacen.estante %></td>
+                                    <td><%= almacen.nivel %></td> 
+                                    <td><%= almacen.capacidad %></td>
+                                    <td>
+                                        <div class="btn-group btn-group-sm" role="group" aria-label="Acciones">
+                                            <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#detalleAlmacen"
+                                                data-id="<%= almacen._id %>">
+                                                <i class="fa-solid fa-eye"></i> Detalles
+                                            </a>
+                                            <a class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editarAlmacen"
+                                                data-id="<%= almacen._id %>" 
+                                                data-codigo="<%= almacen.codigo %>"
+                                                data-pasillo="<%= almacen.pasillo %>"
+                                                data-seccion="<%= almacen.seccion %>"
+                                                data-estante="<%= almacen.estante %>"
+                                                data-nivel="<%= almacen.nivel %>"
+                                                data-capacidad="<%= almacen.capacidad %>"
+                                                data-ocupacion="<%= almacen.ocupacion %>"
+                                                data-producto="<%= almacen.producto %>">
+                                                <i class="fa-solid fa-user-pen"></i> Editar
+                                            </a>
+                                            <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#eliminarAlmacen"
+                                                data-id="<%= almacen._id %>">
+                                                <i class="fa-solid fa-trash"></i> Eliminar
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            <% }) %>                                
+                        </tbody>
+                    </table>
+                    <a
+                    data-bs-toggle="modal" data-bs-target="#crearAlmacen"
+                    class="btn btn-success btn-crear">
+                    Registrar almacen
+                    <i 
+                    class="fa-solid fa-plus" 
+                    style="margin-left: 9px;">
+                    </i>
+                </a>                   
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+<!--========================================================== -->
+<!--FOOTER-->
+<!--========================================================== -->
+
+<%- include('../../partials/admin/footer.ejs') %>
+
+<!--========================================================== -->
+<!--MODAL CREAR ALMACEN-->
+<!--========================================================== -->
+<%- include('../../modales/almacenes/crearAlmacenes.ejs') %>
+
+<!--========================================================== -->
+<!--MODAL EDITAR ALMACEN-->
+<!--========================================================== -->
+<%- include('../../modales/almacenes/editarAlmacenes.ejs') %>
+
+<!--========================================================== -->
+<!--MODAL ELIMINAR ALMACEN-->
+<!--========================================================== -->
+<%- include('../../modales/almacenes/eliminarAlmacenes.ejs') %>
+
+<!--========================================================== -->
+<!--MODAL DETALLE ALMACEN-->
+<!--========================================================== -->
+<%- include('../../modales/almacenes/detalleAlmacenes.ejs') %>
